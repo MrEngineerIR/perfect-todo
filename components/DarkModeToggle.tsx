@@ -13,7 +13,7 @@ export default function DarkModeToggle() {
       className=" pl-5 text-gray-500 dark:text-gray-300 border-solid border-5 rounded "
     >
       {themeState === "dark" ? (
-        <FaSun className="text-black dark:text-white my-4" />
+        <FaSun className="text-black dark:text-white my-4 " />
       ) : (
         <FaMoon className="text-black dark:text-white my-4" />
       )}

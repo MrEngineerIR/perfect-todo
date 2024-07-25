@@ -52,7 +52,7 @@ const BoardComponent = () => {
   }
 
   return (
-    <div className="w-full h-full dark:bg-gray-900">
+    <div className="">
       <header className="fixed top-20 left-64 flex-row-reverse w-full ml-auto gap-x-4 h-20">
         <nav className="h-full font-bold w-full pl-2 text-3xl dark:bg-gray-800 bg-gray-100 pt-4 justify-start">
           {currentBoard?._id ? (
@@ -85,7 +85,7 @@ const BoardComponent = () => {
           ref={boardDeleteDialogRef}
         />
       </header>
-      <main className="flex w-full mt-60 ml-80  gap-x-10  ml-2 flex-row h-screen">
+      <main className="flex mt-40 ml-64  gap-x-10  ml-2 flex-row">
         {currentBoard?._id && <Category boardId={currentBoard?._id} />}
       </main>
     </div>

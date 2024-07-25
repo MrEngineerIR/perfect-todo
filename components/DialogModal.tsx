@@ -44,16 +44,16 @@ const DialogModal = forwardRef<RefType, PropType>((currentBoard, ref) => {
       id="dialog"
       className={`${
         isModelOpen ? undefined : "hidden"
-      } w-1/3 h-1/3 rounded-lg flex break-words justify-between flex-col  backdrop:backdrop-blur-xl backdrop:backdrop-opacity-75 overflow-x-hidden`}
+      } w-1/3 h-1/3 dark:bg-gray-800 rounded-lg flex break-words justify-between flex-col  backdrop:backdrop-blur-xl backdrop:backdrop-opacity-75 overflow-x-hidden`}
       ref={dialogRef}
     >
       <h1 className="font-bold flex m-3 ">
-        <div className="bg-red-100 p-2  inline-block rounded-full">
+        <div className="bg-red-100 p-2 dark:bg-gray-900 inline-block rounded-full">
           <BsExclamationTriangleFill className="text-red-500 text-2xl " />
         </div>
         <div className="mt-2 ml-2">
           You are permanently delete "
-          <span className="text-red-800 font-bold  ">
+          <span className="text-red-800 font-bold dark:text-red-500  ">
             {addNewlines(currentBoard?.board?.label, 40)}
           </span>
           "Board?
@@ -63,7 +63,7 @@ const DialogModal = forwardRef<RefType, PropType>((currentBoard, ref) => {
         you lose all of "{currentBoard?.board?.label}" data and you cant retrive
         them,just if you are pretty sure delete your board
       </div>
-      <div className="flex items-center justify-end h-1/3 w-full bg-gray-100 dark:bg-gray-800 pr-4 space-x-3">
+      <div className="flex items-center justify-end h-1/4 w-full bg-gray-100 dark:bg-gray-700 pr-4 space-x-3">
         <button
           onClick={() => {
             closeDialog();

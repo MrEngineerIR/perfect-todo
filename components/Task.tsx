@@ -53,18 +53,18 @@ const Task = ({ categoryId }: { categoryId: string }) => {
     setIsFormSubmiting((prev) => !prev);
   }
   return (
-    <div className="block gap-x-3 w-full p-5 ">
+    <div className=" gap-x-3 w-full p-5 ">
       {tasks?.map((task) => {
         return (
           <div
             key={task._id}
-            className="flex h-full rounded-2xl bg-gray-200 hover:bg-gray-300 dark:bg-gray-900 hover:dark:bg-gray-700 mb-2"
+            className="flex h-full  rounded-2xl bg-gray-200 hover:bg-gray-300 dark:bg-gray-900 hover:dark:bg-gray-700 mb-2"
           >
             <TextAreaInput
               hasButton={true}
               maxLength={101}
               submitFunction={handleEditTask.bind(null, task._id)}
-              buttonStyle="h-10 rounded-2xl w-64 h-10  break-words font-sm text-start pl-3 "
+              buttonStyle="rounded w-64 h-fit  break-words font-sm p-2 "
               inputStyle="w-64 pl-1 h-fit resize-none dark:bg-gray-900 overflow-hidden"
             >
               {task.text}
@@ -86,8 +86,8 @@ const Task = ({ categoryId }: { categoryId: string }) => {
         hasButton={true}
         maxLength={1000}
         submitFunction={handleAddTask}
-        buttonStyle="flex w-64 m-2 hover:bg-gray-300 h-8 break-words dark:hover:bg-gray-700 hover:bg-gray-200 bg-gray-200 dark:bg-gray-900 rounded-2xl items-center text-center gap-x-1  pl-2"
-        inputStyle=" resize-none pl-1  overflow-hidden w-64 m-2 bg-gray-100 h-20"
+        buttonStyle="flex w-60 hover:bg-gray-300 h-8 ml-4 dark:hover:bg-gray-700 hover:bg-gray-200 bg-gray-200 dark:bg-gray-900 rounded-2xl items-center  gap-x-1  pl-2"
+        inputStyle=" resize-none pl-1  overflow-hidden w-full bg-gray-100 dark:bg-gray-800 h-20"
       >
         <>
           <FaPlus

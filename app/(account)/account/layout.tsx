@@ -14,7 +14,7 @@ export default function AccountLayout({
 }) {
   return (
     <html lang="en">
-      <body>
+      <body className="dark:bg-gray-900">
         <ContextProvider>
           <DarkModeProvider>
             <Navbar />

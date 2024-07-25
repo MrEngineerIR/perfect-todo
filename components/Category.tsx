@@ -54,7 +54,7 @@ export default function Category({ boardId }: { boardId: string | undefined }) {
     setIsFormSubmiting((prev) => !prev);
   }
   return (
-    <div className="flex gap-x-3 ">
+    <div className="flex gap-x-3 m-20 h-fit">
       {categories?.map((category) => {
         return (
           <div
@@ -66,7 +66,7 @@ export default function Category({ boardId }: { boardId: string | undefined }) {
                 hasButton={true}
                 maxLength={101}
                 submitFunction={handleEditCategory.bind(null, category._id)}
-                buttonStyle="h-20 hover:bg-gray-200 rounded-xl hover:dark:bg-gray-700 pl-1 pt-1 h-fit w-full  break-words font-bold text-start "
+                buttonStyle="h-20 hover:bg-gray-200 rounded-xl hover:dark:bg-gray-700 pl-1 pt-1 h-fit w-64  break-words font-bold text-start "
                 inputStyle="w-64 h-fit pl-1 resize-none dark:bg-gray-900 overflow-hidden"
               >
                 {category.label}
@@ -93,7 +93,7 @@ export default function Category({ boardId }: { boardId: string | undefined }) {
         hasButton={true}
         maxLength={1000}
         submitFunction={handleCreateBoard}
-        buttonStyle="flex w-40 h-10 break-words dark:hover:bg-gray-700 hover:bg-gray-200 bg-gray-100 dark:bg-gray-800 rounded items-center text-center gap-x-1  pl-2"
+        buttonStyle="flex w-64 h-10 break-words dark:hover:bg-gray-700 hover:bg-gray-200 bg-gray-100 dark:bg-gray-800 rounded items-center text-center gap-x-1  pl-2"
         inputStyle="w-64 h-fit pl-1 resize-none dark:bg-gray-900 overflow-hidden"
       >
         <>
