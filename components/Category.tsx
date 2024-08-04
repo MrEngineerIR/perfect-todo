@@ -34,6 +34,7 @@ export default function Category({ boardId }: { boardId: string | undefined }) {
     setIsFormSubmiting((prev) => !prev);
     const categoryLabel = data.get("input");
     if (!categoryLabel) {
+      setIsFormSubmiting((prev) => !prev);
       return;
     }
     await createCategory(boardId!, categoryLabel as string);
@@ -44,6 +45,10 @@ export default function Category({ boardId }: { boardId: string | undefined }) {
     if (isFormSubmiting) return;
     setIsFormSubmiting((prev) => !prev);
     const categoryLabel = data.get("input");
+    if (!categoryLabel) {
+      setIsFormSubmiting((prev) => !prev);
+      return;
+    }
     await editCategory(categoryId, categoryLabel as string);
     setIsFormSubmiting((prev) => !prev);
   }
@@ -67,7 +72,7 @@ export default function Category({ boardId }: { boardId: string | undefined }) {
                 maxLength={101}
                 submitFunction={handleEditCategory.bind(null, category._id)}
                 buttonStyle="h-20 hover:bg-gray-200 rounded-xl hover:dark:bg-gray-700 pl-1 pt-1 h-fit w-64  break-words font-bold text-start "
-                inputStyle="w-64 h-fit pl-1 resize-none dark:bg-gray-900 overflow-hidden"
+                inputStyle="w-64 min-h-fit max-h-full pl-1 resize-none dark:bg-gray-900 overflow-hidden bg-gray-100"
               >
                 {category.label}
               </TextAreaInput>

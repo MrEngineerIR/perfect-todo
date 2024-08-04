@@ -1,6 +1,5 @@
 import { redirect } from "next/navigation";
 import { cookies } from "next/headers";
-import React, { Fragment } from "react";
 import { validateSession } from "@/utilites/auth";
 import SideBar from "@/components/SideBar";
 import Board from "@/models/Board";
